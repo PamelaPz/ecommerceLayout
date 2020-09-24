@@ -36,11 +36,11 @@ export class FullCarouselComponent implements OnInit {
   customOptions: OwlOptions = {
     loop: true,
     autoplay: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
     dots: true,
-    navSpeed: 700,
+    navSpeed: 800,
     navText : [
       '<img class="arrow_lf" src="./assets/images/arrow-down.png" alt="">',
       '<img class="arrow_rg" src="./assets/images/arrow-down.png" alt="">'],

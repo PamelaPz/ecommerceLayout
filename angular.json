@@ -34,7 +34,9 @@
               "src/assets/fonts/fonts-fontname.sass",
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js"
+            ]
           },
           "configurations": {
             "production": {

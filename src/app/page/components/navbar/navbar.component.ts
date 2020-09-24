@@ -18,6 +18,17 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if (scroll > 300) {
+          $(".navbar").css("background-color" , "rgba(255,255,255,0.9)");
+        }
+        else{
+          $(".navbar").css("background" , "transparent");
+        }
+      })
+    })
   }
 
 }
