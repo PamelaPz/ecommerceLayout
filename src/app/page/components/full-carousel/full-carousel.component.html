@@ -3,11 +3,20 @@
         
         <ng-container *ngFor="let img of images">
             <ng-template carouselSlide [id]="img.id">
-                <img [src]="img.src" [alt]="img.name" [title]="img.name">
+                <img [src]="img.src" [alt]="img.title" [title]="img.name">
                 <div class="content_text">
-                    <h2>Title</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <button class="btn">Button</button>
+                    <div class="logo">
+                        <h2>{{img.logo}}</h2>
+                    </div>
+                    <div class="content_title">
+                        <h1>{{img.title}}</h1>
+                    </div>
+                    <div class="content_p">
+                        <p>{{img.desc}}</p>
+                    </div>
+                    <div class="content_btn">
+                        <button class="btn">Button</button> 
+                    </div>
                 </div>
             </ng-template>
         </ng-container>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions , SlidesOutputData } from 'ngx-owl-carousel-o';
-import {DomSanitizer} from '@angular/platform-browser';
-import {MatIconRegistry} from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
+import { MatIconRegistry } from '@angular/material/icon';
 
 @Component({
   selector: 'full-carousel',
@@ -19,24 +19,18 @@ export class FullCarouselComponent implements OnInit {
   images:any [] = [
     {
       id: 0,
-      name: 'Título 1',
-      src: 'https://static.dezeen.com/uploads/2019/10/circulose-recycled-cotton-clothing-sustainable-fashion-stockholm-sweden_hero-a.jpg',
+      logo: 'Logo',
+      title: 'Título 1',
+      src: 'https://www.thespruce.com/thmb/WN4g3PxPz7VZGOD8fk10_kulSdI=/1800x1012/smart/filters:no_upscale()/how-to-remove-excessive-perfume-odors-2147116-Front-5947ef7388ba45efbc139d4f698dd226.jpg',
+      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
     },
     {
       id: 1,
-      name: 'Título 2',
-      src: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bugatti-chiron-pur-sport-106-1582836604.jpg',
+      logo: 'Logo',
+      title: 'Título 2',
+      src: 'https://www.teknofilo.com/wp-content/uploads/2017/01/Minimalist-smartphone-wallpapers_021.jpg',
+      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
     },
-    {
-      id: 2 ,
-      name: 'Título 3',
-      src: 'https://www.thespruce.com/thmb/WN4g3PxPz7VZGOD8fk10_kulSdI=/1800x1012/smart/filters:no_upscale()/how-to-remove-excessive-perfume-odors-2147116-Front-5947ef7388ba45efbc139d4f698dd226.jpg',
-    },
-    {
-      id: 3,
-      name: 'Título 4',
-      src: 'https://www.cleanipedia.com/images/v2/41ed5a136e522890f7dea3eef9331eed-1800w-1200h.jpg',
-    }
   ];
 
   customOptions: OwlOptions = {
