@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions , SlidesOutputData } from 'ngx-owl-carousel-o';
+import {DomSanitizer} from '@angular/platform-browser';
+import {MatIconRegistry} from '@angular/material/icon';
 
 @Component({
   selector: 'full-carousel',
@@ -7,27 +9,33 @@ import { OwlOptions , SlidesOutputData } from 'ngx-owl-carousel-o';
   styleUrls: ['./full-carousel.component.sass']
 })
 export class FullCarouselComponent implements OnInit {
+  
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+        'thumbs-up',
+        sanitizer.bypassSecurityTrustResourceUrl('assets/img/examples/thumbup-icon.svg'));
+  }
 
   images:any [] = [
     {
       id: 0,
       name: 'Título 1',
-      src: 'https://cdn-mw.niceshops.com/upload/image/product/large/default/glascard-cuadro-de-cristal-paraiso-natural-453403-es.jpg',
+      src: 'https://static.dezeen.com/uploads/2019/10/circulose-recycled-cotton-clothing-sustainable-fashion-stockholm-sweden_hero-a.jpg',
     },
     {
       id: 1,
       name: 'Título 2',
-      src: 'https://www.thewowstyle.com/wp-content/uploads/2015/01/nature-images.jpg',
+      src: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bugatti-chiron-pur-sport-106-1582836604.jpg',
     },
     {
       id: 2 ,
       name: 'Título 3',
-      src: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/aaa19b6d-9b17-48ad-891e-783a5af30121/d2yasvc-b7977a39-b691-4183-92a8-c85f8871f110.jpg',
+      src: 'https://www.thespruce.com/thmb/WN4g3PxPz7VZGOD8fk10_kulSdI=/1800x1012/smart/filters:no_upscale()/how-to-remove-excessive-perfume-odors-2147116-Front-5947ef7388ba45efbc139d4f698dd226.jpg',
     },
     {
       id: 3,
       name: 'Título 4',
-      src: 'https://i.imgur.com/34nX0uU.jpg',
+      src: 'https://www.cleanipedia.com/images/v2/41ed5a136e522890f7dea3eef9331eed-1800w-1200h.jpg',
     }
   ];
 
@@ -37,9 +45,11 @@ export class FullCarouselComponent implements OnInit {
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
-    dots: false,
+    dots: true,
     navSpeed: 700,
-    navText : ['<','>'],
+    navText : [
+      '<img class="arrow_lf" src="./assets/images/arrow-down.png" alt="">',
+      '<img class="arrow_rg" src="./assets/images/arrow-down.png" alt="">'],
     nav: true,
     responsive: {
       0: {

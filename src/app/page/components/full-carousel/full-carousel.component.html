@@ -1,9 +1,14 @@
 <div class="container-fluid px-0">
     <owl-carousel-o [options]="customOptions">
-
+        
         <ng-container *ngFor="let img of images">
             <ng-template carouselSlide [id]="img.id">
-            <img [src]="img.src" [alt]="img.name" [title]="img.name">
+                <img [src]="img.src" [alt]="img.name" [title]="img.name">
+                <div class="content_text">
+                    <h2>Title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <button class="btn">Button</button>
+                </div>
             </ng-template>
         </ng-container>
 

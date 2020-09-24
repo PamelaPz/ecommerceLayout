@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { faUser, faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart, faUser, faShoppingCart, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
